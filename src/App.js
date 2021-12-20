@@ -1,16 +1,17 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
-import Header from './components/Header/Header';
-import Inventory from './components/Inventory/Inventory';
-import Login from './components/Login/Login';
-import NotFound from './components/NotFound/NotFound';
-import OrderReview from './components/OrderReview/OrderReview';
-import PlaceOrder from './components/PlaceOrder/PlaceOrder';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Register from './components/Register/Register';
-import Shipping from './components/Shipping/Shipping';
-import Shop from './components/Shop/Shop';
-import AuthProvider from './context/AuthProvider';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Inventory from "./components/Inventory/Inventory";
+import Login from "./components/Login/Login";
+import NotFound from "./components/NotFound/NotFound";
+import OrderReview from "./components/OrderReview/OrderReview";
+import Orders from "./components/Orders/Orders";
+import PlaceOrder from "./components/PlaceOrder/PlaceOrder";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Register from "./components/Register/Register";
+import Shipping from "./components/Shipping/Shipping";
+import Shop from "./components/Shop/Shop";
+import AuthProvider from "./context/AuthProvider";
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/placeorder">
               <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
+            <PrivateRoute path="/orders">
+              <Orders></Orders>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
